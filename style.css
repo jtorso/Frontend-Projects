@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Stone100: hsl(30, 54%, 90%);
+  --Stone150: hsl(30, 18%, 87%);
+  --Stone600: hsl(30, 10%, 34%);
+  --Stone900: hsl(24, 5%, 18%);
+  --Brown800: hsl(14, 45%, 36%);
+  --Rose800: hsl(332, 51%, 32%);
+  --Rose50: hsl(330, 100%, 98%);
+  --Young: "Young Serif", serif;
+  --Outfit: "Outfit", sans-serif;
+}
+
+@media (max-width: 799px) {
+  .container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .image {
+    background-position: center;
+    background-image: url(assets/images/image-omelette.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 170px;
+  }
+  
+  .simple-omelette {
+    padding: 30px;
+    h1 {
+      font-family: var(--Young);
+      font-weight: 500;
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+    p {
+      font-family: var(--Outfit);
+      font-weight: 400;
+      color: var(--Stone600);
+    }
+  }
+  
+  .preparation-time {
+    background-color: var(--Rose50);
+    padding: 30px 40px 30px 30px;
+    border-radius: 12px;
+    margin: 10px 30px;
+    min-height: 170px;
+    position: relative;
+    text-align: justify;
+    h3 {
+      font-family: var(--Outfit);
+      color: var(--Rose800);
+      font-size: 1.3em;
+      font-weight: 600;
+      padding: 0 0 10px 0;
+    }
+    span {
+      font-weight: 700;
+    }
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 35px;
+      font-size: 22px;
+      color: var(--Rose800);
+    }
+    li {
+      text-align: start;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+      margin: 10px 0 15px 25px;
+      list-style: none;
+    }
+  }
+  
+  
+  .ingredients {
+    padding: 20px 20px 30px 30px;
+    h2 {
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 20px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      list-style: none;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+    }
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 35px;
+      font-size: 22px;
+      color: var(--Brown800);
+    }
+  }
+  
+  hr {
+    border: none;
+    background-color: var(--Stone150);
+    border-radius: 12px;
+    margin-left: 7%;
+    width: 83%;
+    margin-bottom: 10px;
+    height: 1px;
+  }
+  
+  .instructions {
+    padding: 15px 20px 30px 30px;
+    h2 {
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 20px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    ol {
+      position: relative;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+      margin-left: 20px;
+      font-weight: 400;/* 
+      counter-reset: customCounter;  Initialize counter  */
+    }
+    span {
+      font-weight: 700;
+    }
+    li {/* 
+      counter-increment: customCounter; */
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    li::marker { /* 
+      counter-increment: customCounter;  Increment the counter 
+      content: counter(customCounter) ".";  Display the counter value with a period 
+      position: absolute; */
+      left: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--Brown800);
+    }
+  }
+  
+  
+  .nutrition {
+    padding: 15px 30px 30px 30px;
+    text-align: start;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 15px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    p{
+      display: flex;
+      justify-content: space-between; /* Space text and span apart */
+      align-items: center; /* Align text and span vertically */
+      padding: 0;
+      margin: 0 0 25px 0px; /* Space between paragraphs */
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+    }
+  }
+  .list-nutrition {
+    p{
+    display: flex;
+    justify-content: space-between; /* Space text and span apart */
+    align-items: center; /* Align text and span vertically */
+    padding: 0;
+    margin: 15px 0px 15px 30px; /* Space between paragraphs */
+    font-family: var(--Outfit);
+    color: var(--Stone600);
+    width: 80%;
+  }
+  span {
+    font-weight: 700;
+    color: var(--Brown800);
+    margin-right: 20%;
+    text-align: left;
+    width: auto;
+  }
+  hr {
+    border: none;
+    background-color: var(--Stone150);
+    border-radius: 12px;
+    margin-left: 1%;
+    width: 95%;
+    margin-bottom: 10px;
+    height: 1px;
+  }
+ }
+}
+
+
+@media (min-width: 800px) {
+  body {
+    background-color: rgb(251, 236, 208);
+  }
+  .container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    margin-left: 10%;
+    max-width: 80%;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .image {
+    background-position: center;
+    background-image: url(assets/images/image-omelette.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 97%;
+    height: 170px;
+    border-radius: 12px;
+
+  }
+  
+  .simple-omelette {
+    padding: 30px;
+    text-align: start;
+    h1 {
+      font-family: var(--Young);
+      font-weight: 500;
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+    p {
+      font-family: var(--Outfit);
+      font-weight: 400;
+      color: var(--Stone600);
+    }
+  }
+  
+  .preparation-time {
+    background-color: var(--Rose50);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 10px 30px;
+    min-height: 150px;
+    position: relative;
+    text-align: start;
+    h3 {
+      font-family: var(--Outfit);
+      color: var(--Rose800);
+      font-size: 1.3em;
+      font-weight: 600;
+      padding: 0 0 10px 0;
+    }
+    span {
+      font-weight: 700;
+    }
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 35px;
+      font-size: 22px;
+      color: var(--Rose800);
+    }
+    li {
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+      margin: 20px 0 20px 35px;
+      list-style: none;
+    }
+  }
+  
+  
+  .ingredients {
+    padding: 20px 20px 30px 30px;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 20px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      list-style: none;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+    }
+    li::before {
+      content: '•';
+      position: absolute;
+      top: 50%; /* Align vertically to the middle of the text */
+      transform: translateY(-50%);
+      left: -30px;
+      font-size: 30px;
+      color: var(--Brown800);
+    }
+  }
+
+  .ingredients li {
+    position: relative;
+  }
+  
+  hr {
+    border: none;
+    background-color: var(--Stone150);
+    border-radius: 12px;
+    margin-left: 3%;
+    width: 95%;
+    margin-bottom: 10px;
+    height: 1px;
+  }
+  
+  .instructions {
+    padding: 15px 20px 30px 30px;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 20px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    ol {
+      position: relative;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+      margin-left: 20px;
+      font-weight: 400;/* 
+      counter-reset: customCounter;  Initialize counter  */
+    }
+    span {
+      font-weight: 700;
+    }
+    li {/* 
+      counter-increment: customCounter; */
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    li::marker { /* 
+      counter-increment: customCounter;  Increment the counter 
+      content: counter(customCounter) ".";  Display the counter value with a period 
+      position: absolute; */
+      left: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--Brown800);
+    }
+  }
+  
+  
+  .nutrition {
+    padding: 15px 30px 30px 30px;
+    text-align: start;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 15px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    p{
+      display: flex;
+      justify-content: space-between; /* Space text and span apart */
+      align-items: center; /* Align text and span vertically */
+      padding: 0;
+      margin: 0 0 25px 0px; /* Space between paragraphs */
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+    }
+  }
+
+  .list-nutrition {
+    p { 
+    display: flex;
+    justify-content: space-between; /* Space text and span apart */
+    align-items: center; /* Align text and span vertically */
+    padding: 0;
+    margin: 15px 0px 15px 30px; /* Space between paragraphs */
+    font-family: var(--Outfit);
+    color: var(--Stone600);
+    width: 80%;
+  }
+  span {
+    font-weight: 700;
+    color: var(--Brown800);
+    margin-right: 30%;
+    text-align: left;
+    width: auto;
+  }
+  hr {
+    border: none;
+    background-color: var(--Stone150);
+    border-radius: 12px;
+    margin-left: 1%;
+    width: 95%;
+    margin-bottom: 10px;
+    height: 1px;
+  }
+ }
+}
+
+@media (min-width: 1100px) {
+  body {
+    background-color: rgb(251, 240, 219);
+  }
+  .container {
+    margin-top: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-72%);
+    padding: 10px;
+    background-color: white;
+    max-width: 45%;
+    overflow: hidden;
+    border-radius: 22px;
+  }
+  
+  .image {
+    padding: 0;
+    background-position: center;
+    background-image: url(assets/images/image-omelette.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 94%;
+    height: 270px;
+    border-radius: 22px;
+    margin: 20px 40px 20px 20px;
+  }
+  
+  .simple-omelette {
+    padding: 20px 30px 30px 30px;
+    text-align: start;
+    h1 {
+      font-family: var(--Young);
+      font-weight: 500;
+      margin-bottom: 15px;
+      font-size: 2.2rem;
+    }
+    p {
+      font-family: var(--Outfit);
+      font-weight: 400;
+      color: var(--Stone600);
+    }
+  }
+  
+  .preparation-time {
+    background-color: var(--Rose50);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 10px 30px;
+    min-height: 150px;
+    position: relative;
+    text-align: start;
+    h3 {
+      font-family: var(--Outfit);
+      color: var(--Rose800);
+      font-size: 1.3em;
+      font-weight: 600;
+      padding: 0 0 10px 0;
+      margin-bottom: 15px;
+    }
+    span {
+      font-weight: 700;
+    }
+    li {
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+      margin: 0px 0 10px 35px;
+    }
+  }
+  
+  
+  .ingredients {
+    padding: 20px 20px 30px 30px;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 20px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      list-style: none;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+    }
+    li::before {
+      content: '•';
+      position: absolute;
+      top: 50%; /* Align vertically to the middle of the text */
+      transform: translateY(-50%);
+      left: -30px;
+      font-size: 30px;
+      color: var(--Brown800);
+    }
+  }
+
+  .ingredients li {
+    position: relative;
+  }
+  
+  hr {
+    border: none;
+    background-color: var(--Stone150);
+    border-radius: 12px;
+    margin-left: 3%;
+    width: 95%;
+    margin-bottom: 10px;
+    height: 1px;
+  }
+  
+  .instructions {
+    padding: 15px 20px 30px 30px;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 20px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    ol {
+      position: relative;
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+      margin-left: 20px;
+      font-weight: 400;/* 
+      counter-reset: customCounter;  Initialize counter  */
+    }
+    span {
+      font-weight: 700;
+    }
+    li {/* 
+      counter-increment: customCounter; */
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    li::marker { /* 
+      counter-increment: customCounter;  Increment the counter 
+      content: counter(customCounter) ".";  Display the counter value with a period 
+      position: absolute; */
+      left: 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--Brown800);
+    }
+  }
+  
+  
+  .nutrition {
+    padding: 15px 30px 30px 30px;
+    text-align: start;
+    h2 {
+      text-align: start;
+      font-family: var(--Young);
+      color: var(--Brown800);
+      margin: 0px 0 15px 0px;
+      font-size: 1.7em;
+      font-weight: 400;
+    }
+    p{
+      display: flex;
+      justify-content: space-between; /* Space text and span apart */
+      align-items: center; /* Align text and span vertically */
+      padding: 0;
+      margin: 0 0 25px 0px; /* Space between paragraphs */
+      font-family: var(--Outfit);
+      color: var(--Stone600);
+    }
+  }
+  
+  .list-nutrition {
+    p { 
+    display: flex;
+    justify-content: space-between; /* Space text and span apart */
+    align-items: center; /* Align text and span vertically */
+    padding: 0;
+    margin: 15px 0px 15px 30px; /* Space between paragraphs */
+    font-family: var(--Outfit);
+    color: var(--Stone600);
+    width: 80%;
+  }
+  span {
+    font-weight: 700;
+    color: var(--Brown800);
+    margin-right: 30%;
+    text-align: left;
+    width: auto;
+  }
+  hr {
+    border: none;
+    background-color: var(--Stone150);
+    border-radius: 12px;
+    margin-left: 1%;
+    width: 95%;
+    margin-bottom: 10px;
+    height: 1px;
+  }
+ }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
